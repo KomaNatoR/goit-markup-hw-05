@@ -133,9 +133,8 @@ body {
             .link.current::after {
                 content: "";
                 position: absolute;
-                top: 100%;
+                bottom: 0;
                 left: 0;
-                transform: translate(0, -100%);
 
                 width: 100%;
                 height: 4px;
@@ -607,7 +606,8 @@ body {
 
             transition: transform 250ms var(--timing-function);
         }
-        .select-list-item:hover .card-top-text, .select-list-item:focus .card-top-text {transform: translateY(-100%);}
+        .select-list-link:hover .card-top-text,
+         .select-list-link:focus .card-top-text {transform: translateY(-100%);}
 
         .card-bottom-container {
             padding: 20px 24px;
