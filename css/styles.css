@@ -558,7 +558,9 @@ body {
         border: 0;
         border-radius: 4px;
 
-
+        transition: background-color 250ms var(--timing-function), 
+                    color 250ms var(--timing-function), 
+                    box-shadow 250ms var(--timing-function);
     }
 
     .btn-port:hover,
@@ -578,21 +580,20 @@ body {
 
         background-color: var(--main-sections-color);
         border: 1px solid #EEEEEE;
+
+        transition: box-shadow 250ms var(--timing-function);
     }
     .select-list-item:hover, .select-list-item:focus {
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     }
-    .select-list-item:hover .card-top-text {opacity: 1;}
-    .select-list-item:focus .card-top-text {opacity: 1;}
 
-        .card-top-container {position: relative;}
+        .card-top-container {
+            position: relative;
+
+            overflow: hidden;
+        }
         .card-top-text {
             position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-
 
             padding: 63px 24px;
 
@@ -603,8 +604,10 @@ body {
 
             color: #FFFFFF;
             background: rgba(33, 150, 243, 0.9);
-            opacity: 0;
+
+            transition: transform 250ms var(--timing-function);
         }
+        .select-list-item:hover .card-top-text, .select-list-item:focus .card-top-text {transform: translateY(-100%);}
 
         .card-bottom-container {
             padding: 20px 24px;
